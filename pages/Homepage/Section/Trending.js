@@ -46,7 +46,7 @@ const Trending = () => {
             >
               {dataTrending.map((value, index) => {
                 return (
-                  <div data-aos="fade-left" data-aos-delay={`${index}00`}>
+                  <div data-aos="fade-left" data-aos-delay={`${index}00`} key={index}>
                     <Card data={value} type="movie" key={index} />
                   </div>
                 );
@@ -58,7 +58,7 @@ const Trending = () => {
             >
               {dataMovie.map((value, index) => {
                 return (
-                  <div data-aos="fade-left" data-aos-delay={`${index}00`}>
+                  <div data-aos="fade-left" data-aos-delay={`${index}00`} key={index}>
                     <Card data={value} type="tv-series" key={index} />
                   </div>
                 );

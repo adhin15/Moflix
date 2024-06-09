@@ -119,7 +119,7 @@ const Trailer = () => {
               <div className={`flex overflow-x-scroll w-full flex-nowrap px-4 py-4 fade-in`} data-aos="fade-left">
                 {dataUpcoming?.results?.map((value, index) => {
                   return (
-                    <div data-aos="fade-left" data-aos-delay={`${index}00`}>
+                    <div data-aos="fade-left" data-aos-delay={`${index}00`} key={index}>
                       <TrailerCard
                         onMouseOver={() => {
                           changeBg(value.backdrop_path);
