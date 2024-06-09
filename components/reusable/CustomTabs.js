@@ -24,7 +24,7 @@ const CustomTabs = (props) => {
                 onChange={(e) => {changeRadio(e.target.value)}}
             />
             <label
-              for={`input-${val.label}`}
+              htmlFor={`input-${val.label}`}
               className={`${state === val.value ? "active" : ""}`}
             >
               {val.label}

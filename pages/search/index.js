@@ -8,6 +8,9 @@ import SearchSkeleton from "../../components/skeleton/SearchSkeleton";
 
 const SearchPage = () => {
   const router = useRouter();
+  if (router.isFallback) {
+    <h1>Data is loading</h1>;
+  }
   const { query, movie, tv } = router?.query;
   const keyword = query || movie || tv;
   const [searchResult, setSearchResult] = useState([]);

@@ -5,9 +5,14 @@ import react, { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
 import CastSkeleton from "../../components/skeleton/CastSkeleton";
 import CastHeaderSkeleton from "../../components/skeleton/CastHeaderSkeleton";
+import dynamic from "next/dynamic";
+
 
 const Cast = () => {
   const router = useRouter();
+  if (router.isFallback) {
+    <h1>Data is loading</h1>;
+  }
   const { id } = router?.query;
   const imageUrl = `https://image.tmdb.org/t/p/original`;
 

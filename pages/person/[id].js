@@ -11,6 +11,9 @@ import Link from "next/link";
 
 const PersonDetail = () => {
   const router = useRouter();
+  if (router.isFallback) {
+    <h1>Data is loading</h1>;
+  }
   const { id } = router?.query;
   const imageUrl = `https://image.tmdb.org/t/p/original`;
 
