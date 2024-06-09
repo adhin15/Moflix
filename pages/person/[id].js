@@ -190,9 +190,9 @@ const PersonDetail = () => {
                       {movieList?.cast?.slice(0, 10).map((val, index) => {
                         return (
                           <div key={index}>
-                            <MovieCredit data={val} />;
+                            <MovieCredit data={val} />
                           </div>
-                        );
+                        )
                       })}
                     </div>
                   </div>

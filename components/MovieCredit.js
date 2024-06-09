@@ -29,7 +29,7 @@ const MovieCredit = (props) => {
         </Link>
       </div>
     </>
-  );
-};
+  )
+}
 
 export default MovieCredit;
