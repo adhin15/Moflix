@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout from "../../components/Layout";
+import Layout from "../Layout";
 import { getTrendingMovies } from "../../services/Getdata";
 import { useEffect, useState } from "react";
 import Trending from "./Section/Trending";

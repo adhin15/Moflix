@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { getTrendingMovies, getTrendingSeries } from "../../../services/Getdata";
 
-import Switcher from "../../../components/reusable/Switcher";
-import CardSkeleton from "../../../components/skeleton/CardSkeleton";
-import Card from "../../../components/Card";
+import Switcher from "../../reusable/Switcher";
+import CardSkeleton from "../../skeleton/CardSkeleton";
+import Card from "../../Card";
 
 const Trending = () => {
   const [dataTrending, setDataTrending] = useState([]);

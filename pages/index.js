@@ -1,5 +1,5 @@
 import react from "react";
-import Homepage from "./Homepage/Homepage";
+import Homepage from "../components/Homepage/Homepage";
 
 export default function Home() {
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import TrailerCardSkeleton from "../../../components/skeleton/TrailerCardSkeleton";
-import TrailerCard from "../../../components/TrailerCards";
-import CustomTabs from "../../../components/reusable/CustomTabs";
+import TrailerCardSkeleton from "../../skeleton/TrailerCardSkeleton";
+import TrailerCard from "../../TrailerCards";
+import CustomTabs from "../../reusable/CustomTabs";
 
 import { getUpcomingMovies, getMoviesVideo, getAiringToday, getTvVideo } from "../../../services/Getdata";
 import Head from "next/head";
