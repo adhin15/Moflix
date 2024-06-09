@@ -6,6 +6,7 @@ const Pagination = (props) => {
           return (
             <span className={`px-2 cursor-pointer hover:opacity-75 ${currentPage == i + 1 ? "bg-[#012459]" : ""}`}
                 onClick={()=>{setPage(i+1)}}
+                key={i}
             >
               {i + 1}
             </span>

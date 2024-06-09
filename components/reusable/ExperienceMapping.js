@@ -37,6 +37,7 @@ const ExpMapping = (props) =>{
                         }`}
                         data-aos="fade-up"
                         data-aos-once={true}
+                        key={index}
                       >
                         <div className="max-w-[100px] w-full flex items-center">
                           <div className="w-full text-center	">

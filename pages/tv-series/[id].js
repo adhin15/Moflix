@@ -290,7 +290,7 @@ const DetailTvSeries = () => {
                     <div className={`flex overflow-x-scroll w-full flex-nowrap px-4 py-4 my-6`} onScroll={handleScroll}>
                       {castingList?.cast?.slice(0, 10).map((val,index) => {
                         return (
-                          <div className="" data-aos="fade-left" data-aos-delay={`${index}00`}>
+                          <div className="" data-aos="fade-left" data-aos-delay={`${index}00`} key={index}>
                             <CastingList data={val} />
                           </div>
                         );
@@ -448,12 +448,14 @@ const DetailTvSeries = () => {
                   <p className="text-[16px]">
                     {detailTv?.networks?.map((val) => {
                       return (
+                        <div key={index}>
                         <img
                           className="lazy-load-image mb-2"
                           src={imageUrl + val?.logo_path}
                           alt=""
                           style={{ height: 32 }}
-                        />
+                          />
+                          </div>
                       );
                     })}
                   </p>
@@ -465,9 +467,9 @@ const DetailTvSeries = () => {
                 <div className="w-full">
                   <h4 className="text-[16px] font-bold">Keywords</h4>
                   <div className="text-[16px] flex flex-wrap">
-                    {tvKeywords?.results?.map((val) => {
+                    {tvKeywords?.results?.map((val,index) => {
                       return (
-                        <span className="mr-2 mb-2 bg-gray-700 p-1 border rounded border-[#59677d]" data-aos="fade-up">
+                        <span className="mr-2 mb-2 bg-gray-700 p-1 border rounded border-[#59677d]" data-aos="fade-up" key={index}>
                           {val.name}
                         </span>
                       );

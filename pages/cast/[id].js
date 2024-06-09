@@ -6,7 +6,7 @@ import Layout from "../../components/Layout";
 import CastSkeleton from "../../components/skeleton/CastSkeleton";
 import CastHeaderSkeleton from "../../components/skeleton/CastHeaderSkeleton";
 
-const index = () => {
+const Cast = () => {
   const router = useRouter();
   const { id } = router?.query;
   const imageUrl = `https://image.tmdb.org/t/p/original`;
@@ -166,4 +166,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Cast;

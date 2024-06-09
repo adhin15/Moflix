@@ -294,7 +294,7 @@ const DetailMovie = () => {
                     <div className={`flex overflow-x-scroll w-full flex-nowrap px-4 py-4 my-6`} onScroll={handleScroll}>
                       {castingList?.cast?.slice(0, 10).map((val, index) => {
                         return (
-                          <div className="" data-aos="fade-left" data-aos-delay={`${index}00`}>
+                          <div className="" data-aos="fade-left" data-aos-delay={`${index}00`} key={index}>
                             <CastingList data={val} />
                           </div>
                         );
@@ -422,9 +422,9 @@ const DetailMovie = () => {
                 <div className="w-full">
                   <h4 className="text-[16px] font-bold">Keywords</h4>
                   <div className="text-[16px] flex flex-wrap">
-                    {movieKeywords?.keywords?.map((val) => {
+                    {movieKeywords?.keywords?.map((val,index) => {
                       return (
-                        <span className="mr-2 mb-2 bg-gray-700 p-1 border rounded border-[#59677d]" data-aos="fade-up">
+                        <span className="mr-2 mb-2 bg-gray-700 p-1 border rounded border-[#59677d]" data-aos="fade-up" key={index}>
                           {val.name}
                         </span>
                       );

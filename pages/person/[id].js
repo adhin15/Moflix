@@ -24,7 +24,6 @@ const PersonDetail = () => {
   useEffect(() => {
     if (id) {
       getAllData(id);
-      
     }
     window.AOS.init({
       // Initialization
@@ -118,8 +117,8 @@ const PersonDetail = () => {
                 </div>
                 <div className="mb-2" data-aos="fade-right" data-aos-delay="100" data-aos-once={true}>
                   <h4 className="font-bold text-l">Also Known As</h4>
-                  {detailPerson?.also_known_as?.map((val) => {
-                    return <p>{val}</p>;
+                  {detailPerson?.also_known_as?.map((val, index) => {
+                    return <p key={index}>{val}</p>;
                   })}
                 </div>
               </div>
@@ -185,8 +184,12 @@ const PersonDetail = () => {
                       data-aos="fade-left"
                       // data-aos-delay="400"
                     >
-                      {movieList?.cast?.slice(0, 10).map((val) => {
-                        return <MovieCredit data={val} />;
+                      {movieList?.cast?.slice(0, 10).map((val, index) => {
+                        return (
+                          <div key={index}>
+                            <MovieCredit data={val} />;
+                          </div>
+                        );
                       })}
                     </div>
                   </div>

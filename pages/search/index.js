@@ -201,7 +201,7 @@ const SearchPage = () => {
             {!isLoading
               ? searchResult?.results?.map((val, index) => {
                   return (
-                    <div data-aos="fade-up" data-aos-delay={100}>
+                    <div data-aos="fade-up" data-aos-delay={100} key={index}>
                       <SearchResult data={val} type={active} />
                     </div>
                   );
